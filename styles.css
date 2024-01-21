@@ -1,0 +1,223 @@
+
+:root {
+    --text-50: #f0f3f4;
+    --text-100: #e1e8ea;
+    --text-200: #c4d1d4;
+    --text-300: #a6babf;
+    --text-400: #89a3a9;
+    --text-500: #6b8c94;
+    --text-600: #567076;
+    --text-700: #405459;
+    --text-800: #2b383b;
+    --text-900: #151c1e;
+    --text-950: #0b0e0f;
+    
+    --background-50: #f0f3f4;
+    --background-100: #e1e6ea;
+    --background-200: #c4ced4;
+    --background-300: #a6b5bf;
+    --background-400: #899ca9;
+    --background-500: #6b8494;
+    --background-600: #566976;
+    --background-700: #404f59;
+    --background-800: #2b353b;
+    --background-900: #151a1e;
+    --background-950: #0b0d0f;
+    
+    --primary-50: #f0f3f4;
+    --primary-100: #e2e7e9;
+    --primary-200: #c5cfd3;
+    --primary-300: #a8b6bd;
+    --primary-400: #8b9ea7;
+    --primary-500: #6e8691;
+    --primary-600: #586b74;
+    --primary-700: #425057;
+    --primary-800: #2c363a;
+    --primary-900: #161b1d;
+    --primary-950: #0b0d0f;
+    
+    --secondary-50: #f2f0f4;
+    --secondary-100: #e6e2e9;
+    --secondary-200: #ccc4d4;
+    --secondary-300: #b3a7be;
+    --secondary-400: #998aa8;
+    --secondary-500: #7f6c93;
+    --secondary-600: #665775;
+    --secondary-700: #4c4158;
+    --secondary-800: #332b3b;
+    --secondary-900: #19161d;
+    --secondary-950: #0d0b0f;
+    
+    --accent-50: #f4f0f4;
+    --accent-100: #e8e2e9;
+    --accent-200: #d2c4d4;
+    --accent-300: #bba7be;
+    --accent-400: #a48aa8;
+    --accent-500: #8e6c93;
+    --accent-600: #715775;
+    --accent-700: #554158;
+    --accent-800: #392b3b;
+    --accent-900: #1c161d;
+    --accent-950: #0e0b0f; 
+}
+
+
+
+* {
+    letter-spacing: 1px;
+    color-scheme: dark;
+
+}
+
+body {
+    font-family: system-ui;
+    background-color: var(--background-950);
+    color: var(--text-100);
+
+    height: calc(100vh - 2rem);
+    margin: 0;
+    padding-top: 2rem;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.304);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-400);
+    border-radius: 5px;
+}
+
+header {
+    background-color: var(--secondary-500);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    text-align: center;
+    z-index: -10;
+}
+
+header h3 {
+    text-transform: uppercase;
+}
+
+.success {
+    background-color: var(--secondary-500);
+    color: var(--text-100);
+}
+
+.danger {
+    background-color: rgba(255, 0, 0, 0.204);
+    color: var(--text-50);
+}
+
+
+main {
+    height: calc(100% - 8rem);
+
+
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 1rem;
+}
+
+.form-container {
+    height: 100%;
+    padding: 0 1rem;
+    background-color: var(--background-900);
+}
+
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+input,
+textarea {
+    padding: 0.4rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--primary-600);
+    border-radius: 5px;
+
+    background-color: transparent;
+    color: var(--text);
+
+    font-family: system-ui;
+}
+
+#task-title-input {
+    font-size: 1rem;
+}
+
+#submit-btn, .clear-btn {
+    border: none;
+    background-color: var(--primary-400);
+    color: var(--text-950);
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    
+    font-size: 1.25rem;
+}
+
+#submit-btn:hover {
+    background-color: var(--primary-600);
+    color: var(--text-100);
+}
+
+.clear-btn {
+    background-color: var(--accent-400);
+    color: var(--text-950);
+}
+
+.clear-btn:hover {
+    background-color: var(--accent-600);
+    color: var(--text-100);
+}
+
+.task-container {
+    padding: 0 1rem;
+    background-color: var(--secondary-800);
+}
+
+.task-list {
+    height: calc(100vh - 20rem);
+
+    overflow-y: auto;
+    padding-right: 1rem;
+
+}   
+
+.task {
+
+    background-color: var(--secondary-700);
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.task h3 {
+    color: var(--accent-50);
+    margin-top: 0;
+}
+
+.btn {
+    padding: 0.5rem;
+    aspect-ratio: 1;
+
+    background-color: transparent;
+    color: var(--background);
+
+    border: none;
+}
+
